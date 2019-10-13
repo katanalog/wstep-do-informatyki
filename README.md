@@ -24,3 +24,5 @@
 - Pętle,
 - Funkcje,
 - Klasy i obiekty.
+
+**Disclaimer:** _Kurs został opracowany na podstawie [cplusplus.com](http://www.cplusplus.com/)._
