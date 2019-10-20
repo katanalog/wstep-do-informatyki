@@ -1,4 +1,4 @@
-# Typy i kontrola aplikacji
+# Typy i operatory
 
 Przydatność programów „Hello World” pokazanych w poprzednim rozdziale jest raczej wątpliwa. Musieliśmy napisać kilka wierszy kodu, skompilować je, a następnie uruchomić wynikowy program, aby uzyskać wynik prostego zdania zapisanego na ekranie. Na pewno byłoby o wiele szybciej samemu wpisać zdanie wyjściowe.
 
