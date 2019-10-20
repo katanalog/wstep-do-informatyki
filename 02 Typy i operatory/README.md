@@ -364,3 +364,11 @@ Operatory logiczne `&&` i `||` są używane podczas oceny dwóch wyrażeń w cel
 Używając operatorów logicznych, C++ ocenia tylko to, co jest konieczne od lewej do prawej, aby uzyskać połączony wynik relacyjny, ignorując resztę. Dlatego w ostatnim przykładzie `((5 == 5) || (3> 6))` C++ ocenia najpierw, czy `5 == 5 `jest prawdą, a jeśli tak, nigdy nie sprawdza, czy `3> 6` jest prawdą, czy nie.
 
 # Ćwiczenia
+
+1. Sprawdź jaki cel mają podane słowa kluczowe i wypisz je z krótką definicją:
+   ```
+   alignas, alignof, and, and_eq, break, case, catch, char, char16_t, const_cast, continue, decltype, default, explicit, export, extern, false, float, for, new, noexcept, not, not_eq, nullptr, signed, sizeof, static, true, try, while, xor, xor_eq
+   ```
+2. Opisz typy, które nie zostały opisane w skrypcie, korzystając z linku podanego wcześniej.
+3. Rozwiązanie zadań przygotuj w formie PDF dla prowadzącego.
+4. Stwórz aplikację, która wykorzysta **wszystkie** typy oraz struktury zaprezentowanew tym skrypcie (wykorzystaj do tego operatory przypisania `cin` oraz wypisania `cout`, w podobny sposób jak to było na poprzednich zajęciach).
