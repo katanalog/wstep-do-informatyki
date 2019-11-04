@@ -276,3 +276,41 @@ Działa w następujący sposób: przełącznik ocenia wyrażenie i sprawdza, czy
 Jeśli wyrażenie nie było równe stałej1, jest ono następnie sprawdzane względem stałej2. Jeśli jest równy, wykonuje `zróbCośInnego` aż do znalezienia przerwy, kiedy przeskoczy na koniec przełącznika.
 
 Wreszcie, jeśli wartość wyrażenia nie pasuje do żadnej z wcześniej określonych stałych (może być ich dowolna liczba), program wykonuje instrukcje zawarte po domyślnej etykiecie, jeśli istnieje (ponieważ jest opcjonalna).
+
+# Ćwiczenia
+
+1. Przenalizuj następujący kod:
+
+   ```cpp
+   #include<iostream>
+   using std::cout, std::cin;
+   int main() {
+     cout<<"Podaj liczbe rzeczywista x= "; double x;
+     cin>>x;
+     cout<<"Liczba "<<x;
+     if(x>0)
+       cout<<" jest dodatnia.";
+     else
+       cout<<"nie jest dodatnia.";
+     return 0; 
+   }
+   ```
+2. Zmodyfikuj program z poprzedniego zadania, tak aby obliczał mniejszą z dwóch liczb,
+3. Napisz program, który oblicza największą z trzech liczb,
+4. Napisz program, który sprawdza parzystość podanej liczby,
+5. Napisz program, który oblicza wartość bezwzględną z zaczytanej liczby x,
+6. Napisz program, który wczytuje z klawiatury dwie liczby całkowite oraz wyśietla na ekranie tekst informujący czy pierwsza liczba jest podzielna przez drugą,
+7. Napisz program, który dla zaczytanych liczb a, b i c podaje liczbe ̨ rozwiązania równania<br/>`ax^2 + bx + c = 0`
+8. Napisz program, który weryfikuje czy z podanych trzech długości odcinków da się zbudować trójkąt,
+9. Zmodyfikuj program z punktu 8, tak aby w przypadku pozytywnej odpowiedzi podawał rodzaj trójkąta,
+10. Napisz program, który dla podanych trzech długości odcinków obliczy pole trójkąta, o ile da się z nich zbudować trójkąt,
+11. Napisz program, który dla pięciocyfrowej liczby naturalnej sprawdza, czy jest ona palindromem,
+12. Jaki be ̨dzie efekt działania fragmentu kodu?
+    ```cpp
+    int x=-1;
+    int y=(x=x++)?(x+2):(x+3);
+    cout<<y--;
+    ```
+13. Napisz program, który wczyta dwie liczby i w zaleznosci od wybranej opcji obliczy ich sume ̨, róznicę, iloczyn lub iloraz,
+14. Napisz program, który stwierdzi czy podany znak jest wielką literą, małą literą, cyfrą lub innym znakiem,
+15. Napisz program, który dla wczytanej liczby, zależnie od wybranej opcji, obliczy jej sinus, cosinus, kwadrat lub pierwiastek. Użyj funkcji sin(), cos(), sqrt() z biblioteki cmath.
