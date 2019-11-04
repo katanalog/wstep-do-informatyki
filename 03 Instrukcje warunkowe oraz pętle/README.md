@@ -177,3 +177,102 @@ for ( n=0, i=100 ; n!=i ; ++n, --i )
    // Dalsze działania funkcji
 }
 ```
+
+### Pętla for oparta na zakresie
+
+Pętla for ma inną składnię, która jest używana wyłącznie z zakresami:
+
+```cpp
+for ( deklaracja : zakres ) zróbCoś;
+```
+
+Ten rodzaj pętli for iteruje wszystkie elementy w zakresie, w których deklaracja deklaruje jakąś zmienną zdolną do przyjęcia wartości elementu z tego zakresu. Zakresy to sekwencje elementów, w tym tablice, kontenery i każdy inny typ obsługujący funkcje rozpoczynania i kończenia; Większość tych typów nie została jeszcze wprowadzona w tym kursie, ale znamy już co najmniej jeden rodzaj zakresu: ciągi znaków, które są sekwencjami znaków.
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+  string str {"Cześć!"};
+  for (char c : str)
+  {
+    cout << "[" << c << "]";
+  }
+  cout << '\n';
+}
+```
+
+Zwróć uwagę, że to, co poprzedza dwukropek (:) w pętli for, to deklaracja zmiennej char (elementy łańcucha są typu char). Następnie używamy tej zmiennej c w bloku instrukcji do reprezentowania wartości każdego z elementów w zakresie.
+
+## Instrukcje break oraz continue
+
+Instrukcje skoków umożliwiają zmianę przepływu programu poprzez wykonywanie skoków do określonych lokalizacji.
+
+### Break
+
+`break` pozostawia pętlę, nawet jeśli warunek jej końca nie jest spełniony. Można go użyć do zakończenia nieskończonej pętli lub do wymuszenia jej zakończenia przed jej naturalnym końcem. Na przykład zatrzymajmy odliczanie przed jego naturalnym końcem:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+  for (int n=10; n>0; n--)
+  {
+    cout << n << ", ";
+    if (n==3)
+    {
+      cout << "Odliczanie zakończone";
+      break;
+    }
+  }
+}
+```
+
+### Continue
+
+Instrukcja `continue` powoduje, że program pomija resztę pętli w bieżącej iteracji, tak jakby osiągnięto koniec bloku instrukcji, powodując, że przeskakuje ona na początek następnej iteracji. Na przykład pomińmy numer 5 w naszym odliczaniu:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+  for (int n=10; n>0; n--) {
+    if (n==5) continue;
+    cout << n << ", ";
+  }
+  cout << "Odlot!\n";
+}
+```
+
+## Instrukcja Switch
+
+Składnia instrukcji `switch` jest nieco osobliwa. Jej celem jest sprawdzenie wartości wśród wielu możliwych stałych wyrażeń. Jest to coś podobnego do łączenia instrukcji if-else, ale ogranicza się do wyrażeń stałych.
+
+```cpp
+switch (wyrażenie)
+{
+  case stała1:
+     zróbCoś;
+     break;
+  case stała2:
+     zróbCośInnego;
+     break;
+  .
+  .
+  .
+  default:
+     zróbCośCałkiemInnego;
+}
+```
+
+Działa w następujący sposób: przełącznik ocenia wyrażenie i sprawdza, czy jest ono równoważne stałej1; jeśli tak, wykonuje `zróbCoś`, dopóki nie znajdzie instrukcji break. Gdy znajdzie tę instrukcję break, program przeskakuje na koniec całej instrukcji switch (nawias zamykający).
+
+Jeśli wyrażenie nie było równe stałej1, jest ono następnie sprawdzane względem stałej2. Jeśli jest równy, wykonuje `zróbCośInnego` aż do znalezienia przerwy, kiedy przeskoczy na koniec przełącznika.
+
+Wreszcie, jeśli wartość wyrażenia nie pasuje do żadnej z wcześniej określonych stałych (może być ich dowolna liczba), program wykonuje instrukcje zawarte po domyślnej etykiecie, jeśli istnieje (ponieważ jest opcjonalna).
